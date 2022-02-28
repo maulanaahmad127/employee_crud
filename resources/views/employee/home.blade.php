@@ -29,6 +29,7 @@
                     <th>Nama</th>
                     <th>ID Atasan</th>
                     <th>ID Company</th>
+                    <th>Nama Company</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -39,6 +40,7 @@
                     <td>{{ $emp -> nama }}</td>
                     <td>{{ $emp -> atasan_id }}</td>
                     <td>{{ $emp -> company_id }}</td>
+                    <td>{{ $emp -> company -> nama}}</td>
                     <td>
                         <a href="{{ route('employee.edit', $emp->id) }}" class="btn btn-success">Edit</a>
                         <a href="{{ route('employee.destroy', $emp->id) }}" class="btn btn-danger" onclick="return confirm('Hapus Data Employee dengan nama {{ $emp->nama }} ?')">Hapus</a>

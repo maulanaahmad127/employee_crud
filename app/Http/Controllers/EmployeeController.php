@@ -15,6 +15,7 @@ class EmployeeController extends Controller
 
     public function create()
     {
+        $employee = new Employee();
         return view('employee.create', compact('employee'));
     }
 
